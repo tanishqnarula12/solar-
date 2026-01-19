@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SolarScope | Solar Panel Detection</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  
+  <header class="navbar">
+    <div class="logo">☀️ SolarScope</div>
+
+    <nav>
+  <ul class="nav-links">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#analytics">Analytics</a></li>
+    <li><a href="#compare">Compare</a></li>
+    <li><a href="#map">Map</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</nav>
+<div class="theme-toggle">
+  <input type="checkbox" id="themeSwitch">
+  <label for="themeSwitch" class="toggle-label">
+    <span class="sun">☀️</span>
+    <span class="moon">🌙</span>
+  </label>
+</div>
+
+  </header>
+
+ 
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>India’s Solar Power Dashboard</h1>
+      <p>Discover real-time insights into solar installations across all Indian states.</p>
+      <div class="search-box">
+        <input type="text" id="stateInput" placeholder="Enter State Name...">
+        <button id="searchBtn">Search</button>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="result" class="result-section hidden">
+    <h2>☀️ State Solar Statistics</h2>
+    <div id="stateCard" class="card"></div>
+  </section>
+
+  
+  <section id="analytics" class="analytics-section">
+    <h2>📊 National Solar Analytics</h2>
+    <div class="analytics-grid" id="analyticsSummary"></div>
+  </section>
+
+  
+  <section id="map" class="map-section">
+    <h2>🗺️ Installed Capacity Across India</h2>
+    <div id="mapContainer"></div>
+  </section>
+
+
+  <footer>
+    <p>© 2025 SolarScope | Data Source: MNRE & OpenStreetMap</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="solar.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

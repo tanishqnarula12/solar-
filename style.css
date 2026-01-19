@@ -1,0 +1,282 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #222;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #ffb300;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #009879;
+}
+
+.hero {
+  background: linear-gradient(to right, #fff9e6, #f0fff4);
+  text-align: center;
+  padding: 6rem 2rem;
+  background-image: url('solar-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #222;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.7);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #009879;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.search-box input {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 250px;
+  font-size: 1rem;
+}
+
+.search-box button {
+  background: #ffb300;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background: #e6a100;
+}
+
+.result-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.result-section h2 {
+  color: #009879;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background: white;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+  line-height: 1.8;
+}
+
+.hidden {
+  display: none;
+}
+
+.analytics-section {
+  background: #f5fef8;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.analytics-section h2 {
+  color: #ffb300;
+  margin-bottom: 2rem;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.analytics-grid .card {
+  text-align: center;
+  background: white;
+}
+
+.map-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.map-section h2 {
+  color: #009879;
+  margin-bottom: 1.5rem;
+}
+
+#mapContainer iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 450px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+footer {
+  background: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+@media (max-width: 600px) {
+  .search-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .search-box input {
+    width: 90%;
+  }
+}
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* 🌙 Dark Mode */
+body.dark {
+  background-color: #121212;
+  color: #e4e4e4;
+}
+
+body.dark .navbar {
+  background-color: #1f1f1f;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+}
+
+body.dark .nav-links a {
+  color: #ccc;
+}
+
+body.dark .nav-links a:hover,
+body.dark .nav-links .active {
+  color: #ffcc33;
+}
+
+body.dark .hero {
+  background: linear-gradient(to right, #202020, #1a1a1a);
+  background-image: url('solar-bg.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-color: #0c0c0c; 
+  color: #fff;
+}
+
+body.dark .card {
+  background: #1f1f1f;
+  color: #eaeaea;
+  box-shadow: 0 2px 6px rgba(255,255,255,0.05);
+}
+
+body.dark .analytics-section {
+  background: #181818;
+}
+
+body.dark footer {
+  background: #1f1f1f;
+  border-top: 1px solid #333;
+}
+
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.toggle-label {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.toggle-label .sun,
+.toggle-label .moon {
+  display: none;
+}
+
+#themeSwitch:checked + .toggle-label .moon {
+  display: inline;
+}
+
+#themeSwitch:not(:checked) + .toggle-label .sun {
+  display: inline;
+}
