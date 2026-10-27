@@ -35,7 +35,7 @@
   <section id="home" class="hero">
     <div class="hero-content">
       <h1>India’s Solar Power Dashboard</h1>
-      <p>Discover real-time insights into solar installations across all Indian states.</p>
+      <p>Explore indicative solar installation estimates across Indian states and union territories.</p>
       <div class="search-box">
         <input type="text" id="stateInput" placeholder="Enter State Name...">
         <button id="searchBtn">Search</button>
@@ -47,6 +47,17 @@
   <section id="result" class="result-section hidden">
     <h2>☀️ State Solar Statistics</h2>
     <div id="stateCard" class="card"></div>
+  </section>
+
+  <section id="compare" class="compare-section">
+    <h2>⚖️ Compare States</h2>
+    <p class="section-intro">Compare the same estimated solar indicators for two states or union territories.</p>
+    <div class="compare-controls">
+      <label>First location<select id="compareStateA"></select></label>
+      <label>Second location<select id="compareStateB"></select></label>
+      <button id="compareBtn" type="button">Compare</button>
+    </div>
+    <div id="compareResults" class="compare-grid hidden" aria-live="polite"></div>
   </section>
 
   
@@ -63,7 +74,7 @@
 
 
   <footer>
-    <p>© 2025 SolarScope | Data Source: MNRE & OpenStreetMap</p>
+    <p>Estimates use bundled values and simplified assumptions. Map © OpenStreetMap contributors.</p>
   </footer>
 
   <!-- Scripts -->
